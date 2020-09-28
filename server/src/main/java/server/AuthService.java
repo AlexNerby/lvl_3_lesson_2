@@ -6,7 +6,7 @@ public interface AuthService {
      * @return null если пользоватаеля нет
      * */
     String getNicknameByLoginAndPassword(String login, String password);
-
+//
     boolean connectDb();
 
     boolean registration(String login, String password, String nickname);

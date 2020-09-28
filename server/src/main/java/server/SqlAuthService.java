@@ -5,7 +5,7 @@ public class SqlAuthService implements AuthService {
     public String getNicknameByLoginAndPassword(String login, String password) {
         return SqlHandler.getNicknameByLoginAndPassword(login, password);
     }
-
+//
     @Override
     public boolean connectDb() {
         return SqlHandler.connectDb();
