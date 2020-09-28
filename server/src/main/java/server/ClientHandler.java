@@ -77,7 +77,7 @@ public class ClientHandler {
 
                         if (str.startsWith("/")) {
                             System.out.println(str);
-
+//
                             if (str.startsWith("/rename ")) {
                                 String[] token = str.split(" ", 2);
                                 if (token.length < 2) {

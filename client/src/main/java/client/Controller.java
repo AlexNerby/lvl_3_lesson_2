@@ -139,7 +139,7 @@ public class Controller implements Initializable {
                                 if (str.equals("/end")) {
                                     break;
                                 }
-
+//
                                 if (str.startsWith("/newTitle ")) {
                                     nickname = str.split(" ")[1];
                                     setTitle(nickname);
