@@ -118,6 +118,8 @@ public class Controller implements Initializable {
                             if (str.startsWith("/authok")) {
                                 nickname = str.split(" ", 2)[1];
                                 setAuthenticated(true);
+                                textArea.appendText(MessageBox.returnMessage(loginField.getText()));
+                                MessageBox.create(loginField.getText());
                                 break;
                             }
 
@@ -139,7 +141,7 @@ public class Controller implements Initializable {
                                 if (str.equals("/end")) {
                                     break;
                                 }
-
+//
                                 if (str.startsWith("/newTitle ")) {
                                     nickname = str.split(" ")[1];
                                     setTitle(nickname);
@@ -163,6 +165,8 @@ public class Controller implements Initializable {
                     } catch (IOException e) {
                         e.printStackTrace();
                     } finally {
+                        MessageBox.clear(loginField.getText());
+                        MessageBox.addMessage(textArea.getText());
                         System.out.println("Мы отключились от сервера");
                         setAuthenticated(false);
                         try {

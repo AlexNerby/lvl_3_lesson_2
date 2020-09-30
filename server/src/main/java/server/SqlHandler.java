@@ -25,7 +25,7 @@ public class SqlHandler {
             return false;
         }
     }
-
+//
     private static void allStatements() throws SQLException {
         getNickName = connection.prepareStatement(
                 "SELECT nickname FROM users WHERE login = ? AND password = ?;");
